@@ -1,1 +1,34 @@
 # Learning-Git
+
+Basic Git Commands
+
+git init -Creates a new local Git repository.
+git status -Shows the status of working directory.
+git add <file> or git add .	-Stages file(s) for the next commit.
+git commit -m "Your message"	-Commits the staged changes with a message.
+git log	-Displays the commit history.
+git diff	-Shows changes between commits.
+
+Branching and Merging
+
+git branch <branch-name>	-Creates a new branch.
+git checkout/switch <branch-name>	-Switches to the specified branch.
+git checkout -b <branch-name>	-Creates and switches to the new branch.
+git branch	-Lists all local branches.
+git merge <branch-name>	-Merges the specified branch into the current branch.
+
+Conflict Handling
+
+Happens during git merge	
+Git marks the conflicting files.
+Resolve conflicts	Manually 
+After resolving	
+ git add <file> 
+ git commit	
+
+Working with Remotes (GitHub)
+
+git remote add origin <URL>	-Links local repo to remote (GitHub).
+git push origin <branch-name>	-Pushes your branch to the remote repo.
+git clone <URL>	-Downloads a repo from GitHub.
+git pull origin <branch-name>	-Fetches and merges changes from remote.
