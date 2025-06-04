@@ -30,3 +30,38 @@ git remote add origin <URL>	-Links local repo to remote (GitHub).
 git push origin <branch-name>	-Pushes your branch to the remote repo.
 git clone <URL>	-Downloads a repo from GitHub.
 git pull origin <branch-name>	-Fetches and merges changes from remote.
+
+git rebase <branch>	-Reapply commits from current branch onto another 
+
+git rebase -i HEAD~<n> -Modify/squash/reword the last n commits interactively.
+git rebase -i HEAD~3	-Modify/squash/reword the last 3 commits interactively.
+
+git stash -Temporarily save and restore uncommitted changes.
+git stash list -Shows the list of Stash
+git stash apply -Reapplies last stash
+git stash pop	-Apply and delete stash
+
+git cherry-pick <commit-hash>	-Apply a specific commit from one branch onto another.
+
+Reset -Undo commits;
+git reset --soft HEAD~1 -soft keeps staged,
+git reset --mixed HEAD~1 -mixed unstages, 
+git reset --hard HEAD~1	 -hard discards.
+
+git revert <commit-hash>	-Safely undo a specific commit by creating a reverse commit.
+
+git clean -f -Delete untracked files (-f)
+git clean -fd	-Delete untracked files (-f) and directories (-fd).
+
+git blame <file>	-Show who last modified each line of a file.
+
+Bisect -Find the commit that introduced a bug using binary search.
+git bisect start -Starts the search
+git bisect bad -marks the current directory as bad
+git bisect good <commit> -Marks known good commit
+git bisect reset	
+
+Tag -Mark versions/releases in the commit history.
+git tag <tag-name> -Created lightweight tag
+git tag -a <tag-name> -m "msg" -Creates an annotated tag
+git push origin <tag-name>	-Push specific tag to remote repo
