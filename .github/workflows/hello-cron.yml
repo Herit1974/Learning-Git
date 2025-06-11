@@ -1,0 +1,12 @@
+name: Hello on Cron
+
+on:
+  schedule:
+    - cron: '30 8 * * *' 
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, World!"
